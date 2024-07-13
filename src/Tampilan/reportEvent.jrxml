@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f3b9621c-a6f3-40c9-b275-43163176c14a">
+	<property name="ireport.zoom" value="2.143588810000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="96"/>
+	<parameter name="nama_karyawan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     data_event.`id_event` AS data_event_id_event,
+     data_event.`jenis_event` AS data_event_jenis_event,
+     data_event.`paket_utama` AS data_event_paket_utama,
+     data_event.`sub_paket` AS data_event_sub_paket,
+     data_event.`lokasi` AS data_event_lokasi,
+     data_event.`harga` AS data_event_harga,
+     data_karyawan.`nama_karyawan` AS data_karyawan_nama_karyawan
+FROM
+     `data_event` data_event,
+     `data_karyawan` data_karyawan
+WHERE
+nama_karyawan = $P{nama_karyawan}]]>
+	</queryString>
+	<field name="data_event_id_event" class="java.lang.String"/>
+	<field name="data_event_jenis_event" class="java.lang.String"/>
+	<field name="data_event_paket_utama" class="java.lang.String"/>
+	<field name="data_event_sub_paket" class="java.lang.String"/>
+	<field name="data_event_lokasi" class="java.lang.String"/>
+	<field name="data_event_harga" class="java.lang.String"/>
+	<field name="data_karyawan_nama_karyawan" class="java.lang.String"/>
+	<background>
+		<band height="802"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<frame>
+				<reportElement uuid="1f30e81b-3e18-4b01-b4ea-49bb8656abb7" mode="Opaque" x="-24" y="-20" width="601" height="98" backcolor="#FFFFFF"/>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="7" width="577" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Cooper Black" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ANGGALA WEDDING]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="26" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Cooper Black" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CATERING SERVICE & WEDDING PACKAGE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="44" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Jl. Budaya No.1 Cililitan, Kramat Jati, Jakarta Timur]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="62" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Telp. 081317256517]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="02265fa0-3ef3-48ae-a7d6-ff5e5d3fbf59" x="19" y="7" width="83" height="84"/>
+					<imageExpression><![CDATA["D:\\NetbeansProject\\KKP_EventOrganizer\\src\\Gambar\\logo.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="80" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Website : www.AnggalaWedding.com]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="03eacfc0-9bb8-47fc-b25c-800fc97789fa" mode="Opaque" x="-21" y="78" width="598" height="21" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="97a1ba20-badc-4e31-961e-eddada4c1967" x="0" y="0" width="115" height="20" forecolor="#F0F0F0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Laporan Data Event]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="816b9d8a-9057-4384-aa2f-9bdb4bc2b329" x="0" y="26" width="70" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Event]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e6ac76bc-4b4c-42cb-b89f-68d4a284151d" x="84" y="27" width="76" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Event]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3506853-2628-4314-80fa-7fcf6f4178f2" x="181" y="27" width="78" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c34a1f82-ea50-49c8-9315-6dd5598f50ed" x="284" y="27" width="78" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Paket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20d388ea-3ea6-4c4e-8862-5ea4b205eda5" x="478" y="26" width="77" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="97a1ba20-badc-4e31-961e-eddada4c1967" x="380" y="27" width="73" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lokasi]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1d7195f6-4831-4dc4-8281-a097231848c3" x="0" y="46" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0b97d318-8db4-4ada-b72e-1b9b1e045d5d" x="0" y="0" width="70" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_event_id_event}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="935aeb1a-147e-4b48-a160-6009b0dae583" x="84" y="0" width="76" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_event_jenis_event}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="85f294b5-6deb-4d30-973f-816b08e7539c" x="181" y="0" width="78" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_event_paket_utama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="50a79bd0-0cf2-45cd-81fe-f10828ccf654" x="284" y="0" width="78" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_event_sub_paket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b071348a-5c0e-4b31-97e9-56dd15df460e" x="478" y="0" width="77" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_event_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="79cb4e89-ce06-4cf1-a12b-bc0fec347181" x="380" y="0" width="73" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_event_lokasi}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="1d7195f6-4831-4dc4-8281-a097231848c3" x="0" y="33" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<frame>
+				<reportElement uuid="9fca443a-0150-4eae-b029-df724ad751bb" mode="Opaque" x="-21" y="0" width="598" height="32" backcolor="#000000"/>
+				<textField>
+					<reportElement uuid="afec3582-72b1-44dc-9bcd-a960f485395a" x="474" y="12" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement uuid="f3bb5123-e6ed-4127-af95-94b043da6919" x="554" y="12" width="44" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="175">
+			<textField>
+				<reportElement uuid="65b5ac70-cfff-4080-844e-7464e3c97ebd" x="380" y="113" width="175" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data_karyawan_nama_karyawan}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement uuid="9fca443a-0150-4eae-b029-df724ad751bb" mode="Opaque" x="-21" y="143" width="598" height="32" backcolor="#000000"/>
+				<textField>
+					<reportElement uuid="afec3582-72b1-44dc-9bcd-a960f485395a" x="474" y="12" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement uuid="f3bb5123-e6ed-4127-af95-94b043da6919" x="554" y="12" width="44" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField pattern="Jakarta, dd MMMMM yyyy">
+				<reportElement uuid="2ff4a57b-f999-49a7-9a88-12c66b39837b" x="380" y="12" width="175" height="21" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Jakarta, "+new SimpleDateFormat("EEEE dd MMMM yyyy", new java.util.Locale("id")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

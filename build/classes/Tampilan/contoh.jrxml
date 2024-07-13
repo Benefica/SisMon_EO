@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c952f155-27be-402c-8c36-9c474a286f1f">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     data_pembayaran.`id_pembayaran` AS data_pembayaran_id_pembayaran,
+     data_pembayaran.`tanggal_pembayaran` AS data_pembayaran_tanggal_pembayaran,
+     data_pembayaran.`id_client` AS data_pembayaran_id_client,
+     data_pembayaran.`nama_client` AS data_pembayaran_nama_client,
+     data_pembayaran.`tanggal_event` AS data_pembayaran_tanggal_event,
+     data_pembayaran.`jumlah_undangan` AS data_pembayaran_jumlah_undangan,
+     data_pembayaran.`id_event` AS data_pembayaran_id_event,
+     data_pembayaran.`jenis_event` AS data_pembayaran_jenis_event,
+     data_pembayaran.`paket_utama` AS data_pembayaran_paket_utama,
+     data_pembayaran.`sub_paket` AS data_pembayaran_sub_paket,
+     data_pembayaran.`lokasi_event` AS data_pembayaran_lokasi_event,
+     data_pembayaran.`jenis_menu1` AS data_pembayaran_jenis_menu1,
+     data_pembayaran.`type_menu1` AS data_pembayaran_type_menu1,
+     data_pembayaran.`request_menu1` AS data_pembayaran_request_menu1,
+     data_pembayaran.`jenis_menu2` AS data_pembayaran_jenis_menu2,
+     data_pembayaran.`type_menu2` AS data_pembayaran_type_menu2,
+     data_pembayaran.`request_menu2` AS data_pembayaran_request_menu2,
+     data_pembayaran.`jenis_menu3` AS data_pembayaran_jenis_menu3,
+     data_pembayaran.`type_menu3` AS data_pembayaran_type_menu3,
+     data_pembayaran.`request_menu3` AS data_pembayaran_request_menu3,
+     data_pembayaran.`total_harga` AS data_pembayaran_total_harga,
+     data_pembayaran.`metode_bayar` AS data_pembayaran_metode_bayar,
+     data_pembayaran.`total_bayar` AS data_pembayaran_total_bayar,
+     data_pembayaran.`nama_admin` AS data_pembayaran_nama_admin,
+     data_karyawan.`id_karyawan` AS data_karyawan_id_karyawan,
+     data_karyawan.`nama_karyawan` AS data_karyawan_nama_karyawan
+FROM
+     `data_pembayaran` data_pembayaran,
+     `data_karyawan` data_karyawan]]>
+	</queryString>
+	<field name="data_pembayaran_tanggal_pembayaran" class="java.sql.Date"/>
+	<field name="data_pembayaran_id_client" class="java.lang.String"/>
+	<field name="data_pembayaran_nama_client" class="java.lang.String"/>
+	<field name="data_pembayaran_tanggal_event" class="java.sql.Date"/>
+	<field name="data_pembayaran_jumlah_undangan" class="java.lang.String"/>
+	<field name="data_pembayaran_id_event" class="java.lang.String"/>
+	<field name="data_pembayaran_jenis_event" class="java.lang.String"/>
+	<field name="data_pembayaran_paket_utama" class="java.lang.String"/>
+	<field name="data_pembayaran_sub_paket" class="java.lang.String"/>
+	<field name="data_pembayaran_lokasi_event" class="java.lang.String"/>
+	<field name="data_pembayaran_jenis_menu1" class="java.lang.String"/>
+	<field name="data_pembayaran_type_menu1" class="java.lang.String"/>
+	<field name="data_pembayaran_request_menu1" class="java.lang.String"/>
+	<field name="data_pembayaran_jenis_menu2" class="java.lang.String"/>
+	<field name="data_pembayaran_type_menu2" class="java.lang.String"/>
+	<field name="data_pembayaran_request_menu2" class="java.lang.String"/>
+	<field name="data_pembayaran_jenis_menu3" class="java.lang.String"/>
+	<field name="data_pembayaran_type_menu3" class="java.lang.String"/>
+	<field name="data_pembayaran_request_menu3" class="java.lang.String"/>
+	<field name="data_pembayaran_total_harga" class="java.lang.String"/>
+	<field name="data_pembayaran_metode_bayar" class="java.lang.String"/>
+	<field name="data_pembayaran_total_bayar" class="java.lang.String"/>
+	<field name="data_pembayaran_nama_admin" class="java.lang.String"/>
+	<field name="data_karyawan_id_karyawan" class="java.lang.String"/>
+	<field name="data_karyawan_nama_karyawan" class="java.lang.String"/>
+	<field name="data_pembayaran_id_pembayaran" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

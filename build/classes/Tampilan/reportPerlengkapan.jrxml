@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cce1fd8f-dc87-4eb9-8eca-60b5767e6efc">
+	<property name="ireport.zoom" value="1.948717100000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="59"/>
+	<parameter name="nama_karyawan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     data_perlengkapan.`nama_barang` AS data_perlengkapan_nama_barang,
+     data_perlengkapan.`jenis_barang` AS data_perlengkapan_jenis_barang,
+     data_perlengkapan.`kondisi_barang` AS data_perlengkapan_kondisi_barang,
+     data_perlengkapan.`lokasi_barang` AS data_perlengkapan_lokasi_barang,
+     data_karyawan.`nama_karyawan` AS data_karyawan_nama_karyawan,
+     data_perlengkapan.`jumlah_barang` AS data_perlengkapan_jumlah_barang
+FROM
+     `data_perlengkapan` data_perlengkapan,
+     `data_karyawan` data_karyawan
+WHERE
+     nama_karyawan = $P{nama_karyawan}]]>
+	</queryString>
+	<field name="data_perlengkapan_nama_barang" class="java.lang.String"/>
+	<field name="data_perlengkapan_jenis_barang" class="java.lang.String"/>
+	<field name="data_perlengkapan_kondisi_barang" class="java.lang.String"/>
+	<field name="data_perlengkapan_lokasi_barang" class="java.lang.String"/>
+	<field name="data_karyawan_nama_karyawan" class="java.lang.String"/>
+	<field name="data_perlengkapan_jumlah_barang" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<frame>
+				<reportElement uuid="1f30e81b-3e18-4b01-b4ea-49bb8656abb7" mode="Opaque" x="-22" y="-19" width="601" height="98" backcolor="#FFFFFF"/>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="7" width="577" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Cooper Black" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ANGGALA WEDDING]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="26" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Cooper Black" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CATERING SERVICE & WEDDING PACKAGE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="44" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Jl. Budaya No.1 Cililitan, Kramat Jati, Jakarta Timur]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="62" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Telp. 081317256517]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="02265fa0-3ef3-48ae-a7d6-ff5e5d3fbf59" x="19" y="7" width="83" height="84"/>
+					<imageExpression><![CDATA["D:\\NetbeansProject\\KKP_EventOrganizer\\src\\Gambar\\logo.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="11f08f04-b373-45db-97e1-f5ddf73c6bb1" x="22" y="80" width="579" height="18" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Website : www.AnggalaWedding.com]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="03eacfc0-9bb8-47fc-b25c-800fc97789fa" mode="Opaque" x="-19" y="79" width="598" height="21" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="d217df60-ec8c-465e-b590-e51714444eed" x="0" y="1" width="160" height="20" forecolor="#F0F0F0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Laporan Data Perlengkapan]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d217df60-ec8c-465e-b590-e51714444eed" x="0" y="29" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f2ac957e-6017-4b2f-9ba5-7f94374397b5" x="0" y="60" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c29a5b07-21e5-404c-9f30-c789d9b2e4b2" x="455" y="29" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lokasi Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a20722f-3b16-4fed-8aaa-9038aa037d1a" x="118" y="29" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f41be31a-9c1b-4c5d-8309-fef761f51763" x="339" y="29" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kondisi Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bf1bd34f-f8f4-44b8-a3dd-0204abd562fc" x="228" y="29" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Barang]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement uuid="afc72982-2212-4852-87f5-dd285118a822" x="0" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_perlengkapan_nama_barang}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="f2ac957e-6017-4b2f-9ba5-7f94374397b5" x="0" y="40" width="555" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="f8895646-cd30-4635-9ede-22623fae8363" x="455" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_perlengkapan_lokasi_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e06315ca-15d7-4703-83a4-7b90500e1e55" x="118" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_perlengkapan_jenis_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cee88462-5d42-475e-b2ac-c3464d73db85" x="339" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_perlengkapan_kondisi_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5d1c7878-12fc-4fb8-ad39-4c7ed9d8b8b8" x="228" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{data_perlengkapan_jumlah_barang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<frame>
+				<reportElement uuid="9fca443a-0150-4eae-b029-df724ad751bb" mode="Opaque" x="-22" y="0" width="598" height="32" backcolor="#000000"/>
+				<textField>
+					<reportElement uuid="afec3582-72b1-44dc-9bcd-a960f485395a" x="474" y="12" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement uuid="f3bb5123-e6ed-4127-af95-94b043da6919" x="554" y="12" width="44" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="145">
+			<frame>
+				<reportElement uuid="9fca443a-0150-4eae-b029-df724ad751bb" mode="Opaque" x="-22" y="113" width="598" height="32" backcolor="#000000"/>
+				<textField>
+					<reportElement uuid="afec3582-72b1-44dc-9bcd-a960f485395a" x="474" y="12" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement uuid="f3bb5123-e6ed-4127-af95-94b043da6919" x="554" y="12" width="44" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField>
+				<reportElement uuid="bba5c942-2451-43bd-ae0a-3e5457237a04" x="381" y="93" width="174" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="Jakarta, dd MMMMM yyyy">
+				<reportElement uuid="2ff4a57b-f999-49a7-9a88-12c66b39837b" x="381" y="0" width="174" height="21" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Jakarta, "+new SimpleDateFormat("EEEE dd MMMM yyyy", new java.util.Locale("id")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
